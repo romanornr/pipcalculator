@@ -21,7 +21,11 @@
     </author>
     
     <preference name="permissions"                value="none"/>
-     <icon src="icon.png" />
+     <icon src="pip.png" />
+     <icon src="pip.png" gap:role="default" />
+<icon src="pip-ldpi.png" gap:platform="android" gap:density="ldpi" />
+<icon src="pip-mdpi.png" gap:platform="android" gap:density="mdpi" />
+<icon src="pip-hdpi.png" gap:platform="android" gap:density="hdpi" />
     
     <gap:platforms>
     <gap:platform name="android" />
