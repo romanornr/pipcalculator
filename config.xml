@@ -10,7 +10,10 @@
     <name>Forex pip calculator</name>
 
     <description>
-        An example for phonegap build docs. 
+        Forex pip calculator. To calculate how much pips you made on a currency pair.
+        Really usefull for trading.
+        Calculate all kind of pairs.
+        EURUSD, GBPUSD, AUDUSD, AUDNZD, EURGBP etc.
     </description>
 
     <author href="https://blog.fxraid.com" email="romanornr@gmail.com">
