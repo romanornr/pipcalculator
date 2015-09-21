@@ -20,6 +20,9 @@
         Blog.FxRaid.com
     </author>
     
+    <preference name="permissions"                value="none"/>
+     <icon src="icon.png" />
+    
     <gap:platforms>
     <gap:platform name="android" />
 <gap:platform name="webos" />
