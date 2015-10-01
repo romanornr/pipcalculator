@@ -1,12 +1,16 @@
-<html>
-<head> 
-<link href="//maxcdn.bootstrapcdn.com/bootswatch/3.3.4/yeti/bootstrap.min.css" rel="stylesheet">
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Forex Pip Calculator app</title>
+  
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+<script src="controllers/MainController.js"></script>
+
+<link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.5/cyborg/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
 
 </head>
-<body>
+<body ng-app="forex">
 
 <nav class="navbar navbar-default">
   <div class="container-fluid">
@@ -31,12 +35,7 @@
           </ul>
         </li>
       </ul>
-      <form class="navbar-form navbar-left" role="search">
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search">
-        </div>
-        <button type="submit" class="btn btn-default">Submit</button>
-      </form>
+      
       <ul class="nav navbar-nav navbar-right">
     
       </ul>
@@ -49,61 +48,32 @@
 
 <!-- </div> -->
 
-
 <H1>Pip calculator.</H1>
 <h4>Not for JPY pairs</h4>
 <br>
-<form method="post" onsubmit="return calcPip();">
-Entry: <input type="text" name="entry">1.3010<p></p>
-Exit:  <input type="text" name="exit">1.3000<p></p>
+<div ng-controller="Ctrl">
+<form>
+Entry: <input type="number" min = "0" name="entry" ng-model="entry">1.3010<p></p>
+Exit:  <input type="number" min = "0" name="exit" ng-model="exit">1.3000<p></p>
+</form>  
 
-<select name="position">
-    <option value="long">long</option>
-    <option value="short">short</option>
-</select>
-
+<button input type="button" class="btn" name="Long" ng-click="calculatePipsLong()">Long<br></button>
+<button input type="button" class="btn" name="Short" ng-click="calculatePipsShort()">Short<br></button>
 <br></br>
-<input type="submit" value="submit" name="submit">
-</form>
-<div id="output_pip"></div>
+<p>Amount of pips: {{outputLong}} {{OutputShort}}</p><br>
+<p>
+Lotsize: <input type="number" min="0" name="lotsize" ng-model="lotsize"><p></p>
+
+<td>1 pip is worth: {{(1 / entry) * lotsize | currency}}</td><br>
+Total amount of pips worth:<td> {{outputLong * ((1 / entry) * lotsize) | currency}}</td>
+</p>
+</div>
+<br></br>
+
+
  </div>
 
 
 
-<!--- Calculator -->
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-<script type="text/javascript">
-  
-  function calcPip() {
-      
-      var entry = document.getElementsByName('entry')[0].value;
-      var exit = document.getElementsByName('exit')[0].value;
-      var pos = document.getElementsByName('position')[0].value;
-      var output;
-	    
-	    if (pos == 'long') {
-	      
-	      output = 'You made ' + Math.round( (exit - entry) * 10000 ) + ' pips with this long';
-	      var pip = Math.round( (exit - entry) * 10000 );
-	      
-	    } else if (pos == 'short') {
-	      output = 'You made ' + Math.round( (entry - exit) * 10000 ) + ' pips with this short';
-	      var pip = Math.round( (entry - exit) * 10000 );
-	    }
-	    
-	    if (pip < 0){
-	       
-         document.getElementById('output_pip').innerText = output;
-         document.getElementById('output_pip').style.color = 'red';
-         
-	    }else{
-	       document.getElementById('output_pip').innerText = output;
-	        
-	        document.getElementById('output_pip').style.color = 'green';
-	    }
-      
-      return false;
-  }
-</script>
 </body>
 </html>
