@@ -2,8 +2,7 @@ var app = angular.module('forex', []);
 
 app.controller('Ctrl', function($scope) {
   
-  $scope.entry = 0;
-  $scope.exit = 0;
+
   //$scope.totalPipWorth = ($scope.outputShort / $scope.entry) * $scope.lotsize;
 
   
@@ -15,6 +14,7 @@ app.controller('Ctrl', function($scope) {
   $scope.calculatePipsShort = function() {
     
     $scope.outputLong = Math.round(($scope.entry - $scope.exit) * 10000); 
+      
   }
   
   $scope.calculatePipWorth = function() {

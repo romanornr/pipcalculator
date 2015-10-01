@@ -3,7 +3,7 @@
         xmlns:gap   = "http://phonegap.com/ns/1.0"
         id          = "xonmp.forex_pip_calculator"
         versionCode = "10" 
-        version     = "1.0.0" >
+        version     = "2.1.0" >
 
     <!-- versionCode is optional and Android only -->
 
@@ -21,11 +21,16 @@
     </author>
     
     <preference name="permissions"                value="none"/>
-     <icon src="pip.png" />
-     <icon src="pip.png" gap:role="default" />
-<icon src="pip-ldpi.png" gap:platform="android" gap:density="ldpi" />
-<icon src="pip-mdpi.png" gap:platform="android" gap:density="mdpi" />
-<icon src="pip-hdpi.png" gap:platform="android" gap:density="hdpi" />
+     <icon src="logo/pip.png" />
+     <icon src="logo/pip.png" gap:role="default" />
+<icon src="logo/pip-ldpi.png" gap:platform="android" gap:density="ldpi" />
+<icon src="logo/pip-mdpi.png" gap:platform="android" gap:density="mdpi" />
+<icon src="logo/pip-hdpi.png" gap:platform="android" gap:density="hdpi" />
+    
+     <gap:splash src="res/screen/android/screen-ldpi-portrait.png"       gap:platform="android" gap:qualifier="port-ldpi" />
+    <gap:splash src="res/screen/android/screen-mdpi-portrait.png"       gap:platform="android" gap:qualifier="port-mdpi" />
+    <gap:splash src="res/screen/android/screen-hdpi-portrait.png"       gap:platform="android" gap:qualifier="port-hdpi" />
+    <gap:splash src="res/screen/android/screen-xhdpi-portrait.png"      gap:platform="android" gap:qualifier="port-xhdpi" /
     
     <gap:platforms>
     <gap:platform name="android" />

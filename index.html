@@ -1,46 +1,23 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-  <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
   <title>Forex Pip Calculator app</title>
+  <link href="http://code.ionicframework.com/1.0.0-rc.5/css/ionic.css" rel="stylesheet">
+  <link href="container.css" rel="stylesheet">
   
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
 <script src="controllers/MainController.js"></script>
-
-<link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.5/cyborg/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+<script src="http://code.ionicframework.com/1.0.0-rc.5/js/ionic.bundle.min.js"></script>
 
 </head>
 <body ng-app="forex">
 
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">Forex</a>
-    </div>
 
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li><a href="index.php">Home</a></li>
-          <li><a href="http://blog.fxraid.com">Blog</a></li>
-        <li><a href="pip.php">Pip calculator</a></li>
-        <li><a href="checklist.php">Checklist</a></li>
-        <li><a href="headmap.php">Heatmap</a></li>
-        
-          </ul>
-        </li>
-      </ul>
-      
-      <ul class="nav navbar-nav navbar-right">
-    
-      </ul>
-    </div>
-  </div>
+<div class="bar bar-header bar-calm">
+  <h1 class="title">Forex pip calculator</h1>
+</div>
 </nav>
 <div class="container">
 <!--
@@ -48,19 +25,32 @@
 
 <!-- </div> -->
 
-<H1>Pip calculator.</H1>
+<br></br>
+<br>
 <h4>Not for JPY pairs</h4>
 <br>
-<div ng-controller="Ctrl">
-<form>
-Entry: <input type="number" min = "0" name="entry" ng-model="entry">1.3010<p></p>
-Exit:  <input type="number" min = "0" name="exit" ng-model="exit">1.3000<p></p>
-</form>  
 
-<button input type="button" class="btn" name="Long" ng-click="calculatePipsLong()">Long<br></button>
-<button input type="button" class="btn" name="Short" ng-click="calculatePipsShort()">Short<br></button>
+<div ng-controller="Ctrl">
+
+<div class="list">
+  <label class="item item-input item-stacked-label">
+    <span class="input-label">Entry (1.3010)</span>
+<input type="number" min = "0" name="entry" ng-model="entry"><p></p>
+</label>
+
+
+  <label class="item item-input item-stacked-label">
+    <span class="input-label">Exit  (1.290)</span>
+<input type="number" min = "0" name="exit" ng-model="exit">
+  </label>
+  </div>
+
+<div style="margin: 10px; width:500px">
+<button class="button button-balanced" input type="button" class="btn" name="Long" ng-click="calculatePipsLong()">Long<br></button>
+<button class="button button-assertive" class="btn" name="Short" ng-click="calculatePipsShort()">Short<br></button>
 <br></br>
-<p>Amount of pips: {{outputLong}} {{OutputShort}}</p><br>
+<div-ngstyle="{color:'red' < 0}">
+<h5>Amount of pips: {{outputLong}} {{OutputShort}}</p><br>
 <p>
 Lotsize: <input type="number" min="0" name="lotsize" ng-model="lotsize"><p></p>
 
@@ -69,11 +59,14 @@ Total amount of pips worth:<td> {{outputLong * ((1 / entry) * lotsize) | currenc
 </p>
 </div>
 <br></br>
+</h5>
 
 
  </div>
 
-
+<div class="bar bar-footer bar-balanced">
+  <div class="title">Blog.FxRaid.com</div>
+</div>
 
 </body>
 </html>
