@@ -21,6 +21,7 @@
     </author>
     
     <preference name="permissions"                value="none"/>
+    <preference name='phonegap-version' value='cli-5.1.1' />
      <icon src="logo/pip.png" />
      <icon src="logo/pip.png" gap:role="default" />
 <icon src="logo/pip-ldpi.png" gap:platform="android" gap:density="ldpi" />
