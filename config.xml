@@ -29,7 +29,7 @@
     
     <gap:splash src="res/drawable-mdpi/background.9.png"       gap:platform="android" gap:qualifier="port-mdpi" />
     <gap:splash src="res/drawable-hdpi/background.9.png"       gap:platform="android" gap:qualifier="port-hdpi" />
-    <gap:splash src="drawable-xhdpi/background.9.png"      gap:platform="android" gap:qualifier="port-xhdpi"/>
+    <gap:splash src="res/drawable-xhdpi/background.9.png"      gap:platform="android" gap:qualifier="port-xhdpi"/>
     
     <gap:platforms>
     <gap:platform name="android" />
