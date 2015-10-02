@@ -4,13 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
   <title>Forex Pip Calculator app</title>
-  <link href="http://code.ionicframework.com/1.0.0-rc.5/css/ionic.css" rel="stylesheet">
-  <link href="container.css" rel="stylesheet">
-  
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
-<script src="controllers/MainController.js"></script>
-<script src="http://code.ionicframework.com/1.0.0-rc.5/js/ionic.bundle.min.js"></script>
-
+  <link href="css/ionic.css" rel="stylesheet">
+  <link href="css/container.css" rel="stylesheet">
 </head>
 <body ng-app="forex">
 
@@ -72,6 +67,11 @@ Total amount of pips worth:<td> {{outputLong * ((1 / entry) * lotsize) | currenc
 <div class="bar bar-footer bar-balanced">
   <div class="title">Blog.FxRaid.com</div>
 </div>
+
+<script src="JS/angular.min.js"></script>
+<script src="controllers/MainController.js"></script>
+<script src="JS/ionic.bundle.min.js"></script>
+
 
 </body>
 </html>
