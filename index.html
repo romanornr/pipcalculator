@@ -31,13 +31,13 @@
 <div class="list">
   <label class="item item-input item-stacked-label">
     <span class="input-label">Entry (1.3010)</span>
-<input type="number" min = "0" name="entry" ng-model="entry"><p></p>
+<input type="text" min = "0" name="entry" ng-model="entry"><p></p>
 </label>
 
 
   <label class="item item-input item-stacked-label">
     <span class="input-label">Exit  (1.290)</span>
-<input type="number" min = "0" name="exit" ng-model="exit">
+<input type="text" min = "0" name="exit" ng-model="exit">
   </label>
   </div>
 
@@ -52,7 +52,7 @@
   <label class="item item-input item-stacked-label">
     <span class="input-label">Lotsize</span>
 
-    <input type="number" min="0" name="lotsize" ng-model="lotsize"><p></p>
+    <input type="text" min="0" name="lotsize" ng-model="lotsize"><p></p>
       </label>
   </div>
 <td>1 pip is worth: {{(1 / entry) * lotsize | currency}}</td><br>
