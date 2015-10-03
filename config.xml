@@ -29,9 +29,7 @@
 <icon src="logo/pip-mdpi.png" gap:platform="android" gap:density="mdpi" />
 <icon src="logo/pip-hdpi.png" gap:platform="android" gap:density="hdpi" />
     
-    <gap:splash src="res/drawable-mdpi/screen.png"       gap:platform="android" gap:qualifier="port-mdpi" />
-    <gap:splash src="res/drawable-hdpi/screen.png"       gap:platform="android" gap:qualifier="port-hdpi" />
-    <gap:splash src="res/drawable-xhdpi/screen.png"      gap:platform="android" gap:qualifier="port-xhdpi"/>
+
     
     <gap:platforms>
     <gap:platform name="android" />
