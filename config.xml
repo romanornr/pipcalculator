@@ -9,8 +9,12 @@
     <name>Forex pip calculator</name>
 
     <description>
-        Forex pip calculator. To calculate how much pips you made on a currency pair.
-        Really usefull for trading.
+Forex pip calculator. To calculate how much pips you made on a currency pair.
+Do you know how much pips the market moved? Problems with calculating it?
+Use this app to calculate that.
+It also automatically calculates how much money each pip is worth
+and the total amount of money you made on a trade.
+Easy & quick calculation. Let the app do the work
         Calculate all kind of pairs.
         EURUSD, GBPUSD, AUDUSD, AUDNZD, EURGBP etc.
     </description>
