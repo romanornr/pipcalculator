@@ -19,7 +19,7 @@
         Blog.FxRaid.com
     </author>
     
-    <gap:plugin name="org.crosswalk.engine" version="14.4" />
+    <gap:plugin name="org.crosswalk.engine" />
     
     <preference name="permissions"                value="none"/>
     <preference name='phonegap-version' value='cli-5.2.0' />
