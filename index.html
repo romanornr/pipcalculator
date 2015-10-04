@@ -55,8 +55,8 @@
     <input type="text" min="0" name="lotsize" ng-model="lotsize"><p></p>
       </label>
   </div>
-<td>1 pip is worth: {{(1 / entry) * lotsize | currency}}</td><br>
-Total amount of pips worth:<td> {{outputLong * ((1 / entry) * lotsize) | currency}}</td><br> </br>
+<td>1 pip is worth: {{((0.0001 / entry * 100000) * lotsize) * entry | currency}}</td><br>
+Total amount of pips worth:<td> {{outputLong * ((0.0001 / entry * 100000) * lotsize) * entry| currency}}</td><br> </br>
 
 Required equity 500x leverage:<td> {{(entry * lotsize * 100000) / 500 | currency}}</td> <br>
 Required equity 200x leverage:<td> {{(entry * lotsize * 100000) / 200 | currency}}</td> <br>
